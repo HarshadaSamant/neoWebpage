@@ -151,7 +151,7 @@ body {
 .header_inner {
   background: transparent;
   position: absolute;
-  top: 0;
+  top: 120px;
   z-index: 2;
   width: 100%;
 }
@@ -181,9 +181,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin: -118px 0 150px;
+  transform: skew(0deg, 7deg);
 } 
 
-.banner:after {
+/*.banner:after {
     content: "";
     background: #fff;
     height: 200px;
@@ -193,13 +195,15 @@ body {
     transform: skew(0deg, 10deg);
     transform-origin: 0 0;
 }
-
+*/
 .banner_wrapper {
-  position: relative;
-  height: 864px;
+  /*position: relative;*/
+  /*height: 864px;*/
+  transform: skew(0deg, -7deg);
+  padding: 120px 0 100px;
 }
 
-.banner_wrapper:after {
+/*.banner_wrapper:after {
     content: "";
     background: #fff;
     height: 205px;
@@ -208,7 +212,7 @@ body {
     bottom: 0;
     transform: skew(0, 7deg);
     transform-origin: 0;
-}
+}*/
 
 .banner_inner {
   margin: 0 auto;
@@ -354,6 +358,7 @@ body {
   color: #292a2f;
   font-size: 18px;
   margin: 25px 0;
+  line-height: 1.7;
 }
 
 .growth .description .get_started {
@@ -459,8 +464,9 @@ animation-duration: 4s;
 
 .feature_card .feature_detail {
   font-size: 14px;
-  font-family: Montserrat-SemiBold;
+  font-family: Montserrat-Regular;
   color: #292a2f;
+  line-height: 1.7;
 }
 
 .ios {
@@ -469,8 +475,10 @@ animation-duration: 4s;
   background-position: center;
   background-size: cover;
   position: relative;
-  height: 1314px;
+  /*height: 1314px;*/
   overflow: hidden;
+  transform: skew(0deg, 7deg);
+  margin: 150px 0;
 }
 
 .ios:before {
@@ -487,7 +495,7 @@ animation-duration: 4s;
   background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f33050', endColorstr='#f64623', GradientType=1 );
 }
-
+/*
 .ios_inner:before {
   content: "";
   background: #fff;
@@ -536,9 +544,10 @@ animation-duration: 4s;
     transform: skew(0, 7deg);
     transform-origin: 0;
 }
-
+*/
 .ios_inner {
-  padding-top: 200px;
+  /*padding-top: 200px;*/
+  transform: skew(0deg, -7deg);
 }
 
 .ios_wrapper {
@@ -597,6 +606,7 @@ animation-duration: 4s;
 .ios_details {
   color: #fff;
   font-size: 18px;
+  line-height: 1.7;
 }
 
 .ios_wrapper .quote {
@@ -688,6 +698,7 @@ animation-duration: 4s;
   color: #000;
   font-size: 18px;
   font-family: Montserrat-SemiBold;
+  line-height: 1.7;
 }
 
 .android_description .quote {
@@ -822,6 +833,7 @@ animation-duration: 4s;
   font-size: 18px;
   margin: 25px 0;
   font-family: Montserrat-SemiBold;
+  line-height: 1.7;
 }
 
 .products .device .get_started {
@@ -854,10 +866,11 @@ animation-duration: 4s;
 }
 
 .about .description .details {
-  padding: 30px 0;
+  padding: 30px 69px;
   font-size: 18px;
   color: #fff;
   font-family: Montserrat-Light;
+  line-height: 1.7;
 }
 
 .about .data {
@@ -925,7 +938,7 @@ animation-duration: 4s;
   display: block;
   width: 200px;
   max-height: 170px;
-  padding: 50px;
+  padding: 50px 66px;
   border-right: 1px solid #cccccc82;
   border-bottom: 1px solid #cccccc82;
   /*animation-name: pop;
@@ -935,11 +948,6 @@ animation-duration: 4s;
 .clients .client_logo img {
   height: 100%;
 }
-
-/*@keyframes pop {
-  0% { background-color: #cccccc; }
-  100% { background-color: #fff;}
-}*/
 
 .clients .client_logo:nth-of-type(5n) {
   border-right: none;
@@ -982,6 +990,8 @@ animation-duration: 4s;
   padding: 40px 0 30px;
   font-size: 18px;
   color: #000;
+  font-family: Montserrat-SemiBold;
+  line-height: 1.7;
 }
 
 .contact .address,
@@ -989,13 +999,14 @@ animation-duration: 4s;
 .contact .mail {
   padding: 10px 0;
   font-size: 18px;
+  font-family: Montserrat-SemiBold;
 }
 
 .contact .label {
   font-size: 18px;
   color: #000;
   text-transform: capitalize;
-  font-family: Montserrat-Semibold;
+  font-family: Montserrat-Bold;
 }
 
 .contact .message {
@@ -1047,7 +1058,7 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  /*height: 700px;*/
   color: #fff;
   text-align: center;
   padding: 340px 0 80px;
