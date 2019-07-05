@@ -1,82 +1,38 @@
 $(document).ready(function() {
-  $('.coupon_carousel').owlCarousel({
-      loop:false,
-      margin: 5,
-      nav:true,
-      dots: false,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:2
-          },
-          1000:{
-              items:3
-          }
-      }
-  })
-
-    $('.coupon_category_carousel').owlCarousel({
-      loop:false,
-      nav:true,
-      dots: false,
-      responsive:{
-          0:{
-            items:1
-          },
-          500:{
-              items:2
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:5
-          }
-      }
-  })
-
-    $('.hot_offer_carousel').owlCarousel({
-      loop:false,
-      margin: 30,
-      nav:true,
-      dots: false,
-      responsive:{
-          0:{
-            items:1
-          },
-          400:{
-              items:2
-          },
-          700:{
-              items:3
-          },
-          1000:{
-              items:3
-          }
-      }
-  })
+  // $('.coupon_carousel').owlCarousel({
+  //     loop:false,
+  //     margin: 5,
+  //     nav:true,
+  //     dots: false,
+  //     responsive:{
+  //         0:{
+  //             items:1
+  //         },
+  //         600:{
+  //             items:2
+  //         },
+  //         1000:{
+  //             items:3
+  //         }
+  //     }
+  // })
 
 
-  $("#menu-icon").click(function(){ 
-        $(".collapse").toggleClass("show");
-        $("body").toggleClass("hide");
-        $(".page").toggleClass("scroll");
-  });
 
-  $('.language_list').select2({         
-      minimumResultsForSearch: Infinity
-  });
 
-      $('.data').waypoint(function(direction){
-        $('.number1').each(function () {
+  // $("#menu-icon").click(function(){ 
+  //       $(".collapse").toggleClass("show");
+  //       $("body").toggleClass("hide");
+  //       $(".page").toggleClass("scroll");
+  // });
+
+    $('.data').waypoint(function(direction){
+      $('.number1').each(function () {
           $(this).prop('Counter',0).animate({
               Counter: 21
           }, {
-              delay: 2000,
-              duration: 1000,
-              easing: 'linear',
+              duration: 1000,              
+              easing: 'swing',
               step: function (now) {
                   $(this).text(Math.ceil(now));
               }
@@ -86,8 +42,8 @@ $(document).ready(function() {
           $(this).prop('Counter',0).animate({
               Counter: 1000
           }, {
-              duration: 1000,
-              easing: 'linear',
+              duration: 1000,              
+              easing: 'swing',
               step: function (now) {
                   $(this).text(Math.ceil(now));
               }
@@ -97,8 +53,8 @@ $(document).ready(function() {
           $(this).prop('Counter',0).animate({
               Counter: 750
           }, {
-              duration: 1000,
-              easing: 'linear',
+              duration: 1000,              
+              easing: 'swing',
               step: function (now) {
                   $(this).text(Math.ceil(now));
               }
@@ -108,36 +64,43 @@ $(document).ready(function() {
           $(this).prop('Counter',0).animate({
               Counter: 4
           }, {
-              duration: 1000,
+              duration: 1000,              
               easing: 'swing',
               step: function (now) {
                   $(this).text(Math.ceil(now));
               }
           });
       });
-    }, {
-      offset: '90%'
+      waypoint.destroy();
+    }, {      
+      offset: '85%'
     });
 
-      $('.features').waypoint(function(direction){
-        $('.feature_card').addClass('fadeIn');
+    $('.features').waypoint(function(direction){
+      $('.feature_card').addClass('fadeIn');
       },{
         offset: '90%'
       });
 
 
-      $('.ios').waypoint(function(direction) {
-        $('.mockup1').addClass('moveDown');
-        $('.mockup2').addClass('moveUp');
-      },{
-        offset: '90%'
-      });
+    $('.ios').waypoint(function(direction) {
+      $('.mockup1').addClass('moveDown');
+      $('.mockup2').addClass('moveUp');
+    },{
+      offset: '70%'
+    });
 
-      $('.android').waypoint(function(direction) {
-        $('.android_screen').addClass('pop');
-      },{
-        offset: '90%'
-      });
+      // $('.android').waypoint(function(direction) {
+      //   $('.android_screen').addClass('pop');
+      // },{
+      //   offset: '95%'
+      // });
+
+    $('.banner').waypoint(function(direction) {
+      $('.banner .get_quote').addClass('shake');
+    },{
+      offset: 'bottom-in-view'
+    });
 
      //  $(".client_logo img").each(function(index){
      //     $(this).css({
