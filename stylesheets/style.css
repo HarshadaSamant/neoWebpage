@@ -959,7 +959,7 @@ animation-duration: 4s;
 
 @keyframes moveUp {
   0% { top: 995px; }
-  100% { top: 271px; }
+  100% { top: 240px; }
 }
 
 
@@ -1168,7 +1168,7 @@ animation-duration: 4s;
 .ios_head {
   font-size: 52px;
   color: #fff;
-  padding: 75px 0 45px;
+  padding: 70px 0 35px;
 }
 
 .ios_details {
@@ -1196,7 +1196,7 @@ animation-duration: 4s;
 .mockup_image.mockup2 {
   position: absolute;
   right: 0;
-  top: 255px;
+  top: 240px;
 }
 
 .android .android_image {
