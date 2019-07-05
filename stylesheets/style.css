@@ -238,7 +238,7 @@ body {
 
 .banner .description {
   margin-left: auto;
-  width: 60%;
+  width: 72%;
 }
 
 .banner .design {
@@ -248,7 +248,7 @@ body {
 
 .banner .banner_title {
   position: relative;
-  padding-left: 230px;
+  padding-left: 365px;
 }
 
 .banner .banner_title:after {
@@ -296,7 +296,7 @@ body {
 }
 
 .banner .banner_details {
-    padding-left: 230px;
+    padding-left: 365px;
 }
 
 .banner .quote_btn {
@@ -1695,15 +1695,12 @@ footer:after {
 .subscribe_inner .social_icon {
   width: 21px;
   display: inline-block;
-  margin-right: 30px;
-}
-
-.subscribe_inner .social_icon.facebook_logo .icon-facebook {
-  color: #fff;
+  margin-right: 30px;  
 }
 
 footer .icon_media {
   font-size: 21px;
+  color: #fff;
 }
 
 footer .icon_media:hover {
