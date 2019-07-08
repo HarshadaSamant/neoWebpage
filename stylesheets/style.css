@@ -163,7 +163,7 @@ a:hover {
 	margin: 0 auto;
 }
 
-button:active {
+.btn_effect:active {
   transform: translateY(4px);
 }
 
@@ -185,8 +185,28 @@ body {
   display: flex;
 }
 
-.header .logo{
-  margin-right: auto;}
+.header .logo {
+  margin-right: auto;
+}
+
+.navbar-toggler {
+  display: none;
+  border: 0;
+} 
+
+.bar:after {
+    content: "";
+    background-color: #fff;
+    width: 20px;
+    height: 3px;
+    margin: -2px 0;
+    display: block;
+}
+
+.bar.short:after {
+  width: 30px;
+  margin: 8px auto;
+}
 
 .header .navbar  {
   margin-left: auto;
@@ -225,12 +245,12 @@ body {
   /*position: relative;*/
   /*height: 864px;*/
   transform: skew(0deg, -12deg);
-  padding: 225px 0 100px;
+  padding: 385px 0 100px;
 }
 
 .banner_inner {
   margin: 0 auto;
-  padding-top: 160px;
+  /*padding-top: 160px;*/
   z-index: 1;
   position: relative;
   display: flex;
@@ -679,7 +699,7 @@ animation-duration: 4s;
 
 .feature_card .feature_head {
   margin: 35px auto;
-  width: 200px;
+  /*width: 200px;*/
   font-size: 28px;
   color: #292a2f;
   text-transform: capitalize;
@@ -747,8 +767,8 @@ animation-duration: 4s;
 }
 
 @keyframes moveDown {
-  0% { top: -772px; }
-  100% { top: -160px; }
+  0% { bottom: 100%; }
+  100% { bottom: 35%; }
 }
 
 .swing1 {
@@ -956,8 +976,8 @@ animation-duration: 4s;
 }
 
 @keyframes moveUp {
-  0% { top: 995px; }
-  100% { top: 240px; }
+  0% { top: 100%; }
+  100% { top: 28%; }
 }
 
 
@@ -1187,14 +1207,14 @@ animation-duration: 4s;
 
 .mockup_image.mockup1 {
   position: absolute;
-  top: -160px;
-  left: -70px;
+  bottom: 35%;
+  left: -12%;
 }
 
 .mockup_image.mockup2 {
   position: absolute;
   right: 0;
-  top: 240px;
+  top: 28%;
 }
 
 .android .android_image {
@@ -1684,7 +1704,7 @@ footer:after {
   padding: 10px;
   height: 60px;
   width: 73px;
-  margin-left: auto;
+  margin-left: 15px;
   border-radius: 3px;
 }
 
@@ -1714,4 +1734,589 @@ footer .icon_media:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f33050', endColorstr='#f64623', GradientType=1 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/*------------------------------------------media queries------------------------------------------------*/
+
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 900px;
+    padding: 0 20px;
+  }
+  
+  .banner .description {
+    width: 50%;
+    left: auto;
+    position: static;
+  }
+  
+  .banner .design {
+    width: 70%;
+    left: -130px;
+  }
+
+  .banner .banner_title,
+  .banner .banner_details {
+    padding-left: 15%;
+  }
+
+  .platforms .platform_wrapper .platforms_logo {
+    width: 130px;
+    margin-left: 10px;
+  }
+  .about .record {
+    padding: 20px;
+  }
+  .clients .client_logo {
+    width: 150px;
+  }
+  .ios_wrapper {
+    padding: 0;
+  }
+  .mockup_image.mockup1 {
+    left: -30%;
+  }
+  .mockup_image.mockup2 {
+    right: -25%;
+    /*top: 30%;*/
+  }
+  .ios_description {
+    padding-bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .banner .design {
+    width: 50%;
+    left: -50px;
+  }
+  .banner_wrapper {
+    padding: 355px 0 50px;
+  }
+  .android_mockups, 
+  .android_description {
+    width: 50%;
+    left: auto;
+  }
+  .features .feature_card {
+    width: 31%;
+    max-width: none;
+  }
+  .mockup_image.mockup1 {
+    width: 90%;
+  }
+  .mockup_image.mockup2 {
+    width: 90%;
+    right: -10%;
+  }
+  .ios_description,
+  .ios_mockups {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .app_number .value {
+    font-size: 73px;
+  }
+  .banner .design {
+    left: auto;
+  }
+  .design_head {
+    font-size: 39px;
+  }
+  .header .logo {
+    width: 25%;
+  }
+  .navbar .nav_item {
+    padding: 10px 5px;
+  }
+  .platforms .platform_wrapper .platforms_logo {
+    width: 29%;
+    margin-right: auto;
+  }
+  .why_us_header .why_head {
+    font-size: 135px;
+  }
+  .feature_card .feature_head {
+    font-size: 20px;
+  }
+  .ios .ios_description .ios_image {
+    width: 35%;
+  }
+  .ios_head {
+    padding-top: 40px;
+  }
+
+  .growth .growth_head,
+  .why_sub_head,
+  .ios_head,
+  .android_head,
+  .products .device .tab_head,
+  .about .description .about_head,
+  .clients .client_head,
+  .contact .contact_head {
+    font-size: 35px;
+    line-height: 1;
+  }
+  .growth .description .details,
+  .android_details,
+  .products .device .details,
+  .about .description .details,
+  .ios_details,
+  .contact .description .details {
+    font-size: 15px;
+  }
+  .about .record .number, .record .num {
+    font-size: 50px;
+  }
+  .about .record {
+    font-size: 18px;
+  }
+  .mockup_image.mockup2 {
+    width: 70%;
+    right: 19px;
+    top: 28%;
+  }
+  .mockup_image.mockup1 {
+    width: 70%;
+    left: -12%;
+  }
+  .clients .client_logo {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    transition-duration: 0.5s;
+  }
+  .navbar-toggler {
+    display: block;
+    color: #fff;
+    background-color: transparent;
+    font-size: 35px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  .hide {
+    overflow: hidden;
+    right: 200px;
+    transition-duration: 0.5s;
+  }
+  .hide:after {
+    background-color: #000;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.4;
+  }
+    .hide .navbar-toggler .bar:after {
+    background-color: #fff;
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+  }
+  .hide .bar.last {
+    position: relative;
+  }
+  .hide .bar.last:after {
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+    position: absolute;
+    bottom: 0;
+  }
+  .hide .navbar-toggler .bar.short:after {
+    display: none;
+    transition-duration: 0s;
+  }
+  .collapse {
+    margin: 0;
+    position: absolute;
+    z-index: 2;
+    top: -40px;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    background: #fff;
+    padding: 0 10px;
+  }
+  .collapse.show {
+    display: block;
+  }
+  .nav_item .nav_link {
+    background: rgba(243,48,80,1);
+    background: -moz-linear-gradient(left, rgba(243,48,80,1) 0%, rgba(246,70,35,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,48,80,1)), color-stop(100%, rgba(246,70,35,1)));
+    background: -webkit-linear-gradient(left, rgba(243,48,80,1) 0%, rgba(246,70,35,1) 100%);
+    background: -o-linear-gradient(left, rgba(243,48,80,1) 0%, rgba(246,70,35,1) 100%);
+    background: -ms-linear-gradient(left, rgba(243,48,80,1) 0%, rgba(246,70,35,1) 100%);
+    background: linear-gradient(to right, rgba(243,48,80,1) 0%, rgba(246,70,35,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f33050', endColorstr='#f64623', GradientType=1 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .app_number .value {
+    font-size: 53px;
+  }
+  .app_number,
+  .design_head {
+    font-size: 30px;
+  }
+  .banner .quote {
+    font-size: 18px;
+  }
+  .why_us_header .why_head {
+    font-size: 120px;
+  }
+  .about .record {
+    padding: 15px;
+  }
+  .products {
+    padding: 0;
+  }
+  .products .device_tab {
+    padding: 30px;
+  }
+  .contact .sender_info_wrapper {
+    flex-wrap: wrap;
+  }
+  .sender_info_wrapper .sender_info:first-child {
+    margin-right: 0;
+  }
+  .contact .message .sender_info {
+    width: 100%;
+  }
+  .contact {
+    padding-bottom: 200px;
+  }
+  .mockup_image.mockup2 {
+    width: 90%;
+    right: -25px;
+  }
+  .mockup_image.mockup1 {
+    width: 90%;
+    left: -28%;
+  }
+  .ios_description {
+    padding-right: 31px;
+  }
+  .products .device .description {
+    padding: 0;
+  }
+  .clients .client_logo {
+    width: 26%;
+  }
+  .clients .client_logo:nth-of-type(5n) {
+    border-right: 1px solid #cccccc82;
+  }
+  .clients .client_logo:nth-of-type(3n)  {
+    border-right: none;
+  }
+  .clients .client_logo:nth-child(1n+11) {
+    border-bottom: 1px solid #cccccc82;
+  }
+  .clients .client_logo:nth-child(1n+13) {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .app_number .value {
+    font-size: 43px;
+  }
+  .app_number, .design_head {
+    font-size: 25px;
+  }
+  .banner .quote_btn {
+    width: auto;
+  }
+  .banner .quote {
+    font-size: 15px;
+  }
+  .growth .growth_head, 
+  .why_sub_head, 
+  .ios_head, .android_head,
+  .products .device .tab_head, 
+  .about .description .about_head, 
+  .clients .client_head, 
+  .contact .contact_head {
+    font-size: 25px;
+  }
+  .growth .description .details, 
+  .android_details, 
+  .products .device .details, 
+  .about .description .details, 
+  .ios_details, 
+  .contact .description .details {
+    font-size: 15px;
+  }
+  .about .record .number, 
+  .record .num {
+    font-size: 40px;
+  }
+  .about .record {
+    font-size: 13px;
+  }
+  .contact .contact_wrapper {
+    flex-wrap: wrap;
+  }
+  .contact .description, 
+  .contact .message {
+    width: 100%;
+  }
+  .contact {
+    padding-bottom: 500px;
+  }
+  .subscribe_inner .newsletter {
+    width: 73%;
+  }
+  .growth_wrapper {
+    flex-direction: column;
+  }
+  .growth .description, .growth .platforms {
+    width: 100%;
+  }
+  .growth .description {
+    order: 2;
+    text-align: center;
+  }
+  .growth_head {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .growth .platform_wrapper {
+    text-align: center;
+    margin: 15px 0;
+  }
+  .platforms .platform_wrapper .platforms_logo {
+    width: 20%;
+    margin: 0 15px;
+  }
+  .why_us_header .why_head {
+    font-size: 93px;
+  }  
+  .why_sub_head {
+    bottom: 20px;
+  }
+  .features .feature_list {
+    flex-direction: column;
+  }
+  .features .feature_card {
+    padding: 30px 25px;
+  }
+  .features .feature_card {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .android_mockups {
+    position: static;
+  }
+  .android .android_image {
+    width: 50%;
+  }
+  .android_head {
+    position: absolute;
+    top: -99px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .android_description .quote,
+  .products .device .get_started {
+    padding: 15px 37px;
+  }
+  .device_tab .icon {
+    font-size: 35px;
+  }
+  .contact .address, 
+  .contact .phone, 
+  .contact .mail {
+    padding: 5px 0;
+  }
+  .contact .message {
+    margin: 35px 0 0;
+  }
+  .contact .address, 
+  .contact .phone, 
+  .contact .mail {
+    font-size: 15px;
+  }
+  .contact .label {
+    font-size: 16px;
+  }
+  .ios {
+    margin: 100px 0 200px;
+  }
+  .mockup_image.mockup1 {
+    left: -19%;
+  }
+  .mockup_image.mockup2 {
+    top: 44%;
+  }
+  @keyframes moveUp {
+    0% { top: 100%; }
+    100% { top: 44%; }
+  }
+  .clients .client_head {
+    padding-bottom: 25px;
+  }
+  footer {
+    padding-top: 200px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app_number, .design_head {
+    font-size: 18px;
+  }
+  .why_us_header .why_head {
+    font-size: 68px;
+  }
+  .why_sub_head {
+    bottom: 15px;
+  }
+  .why_us {
+    padding: 50px 0;
+  }
+  .ios_wrapper .quote {
+    padding: 15px 20px;
+  }
+  .android_description .quote, 
+  .products .device .get_started {
+    padding: 15px 14px;
+    font-size: 12px;
+  }
+  .android_description {
+    padding-left: 5px;
+  }
+  .mockup_image.mockup1 {
+    width: 100%;
+    bottom: 45%;
+    left: -11%;
+  }
+  .mockup_image.mockup2 {
+    width: 100%;
+    top: 47%;
+  }
+  @keyframes moveDown {
+    0% { bottom: 100%; }
+    100% { bottom: 45%; }
+  }
+  @keyframes moveUp {
+    0% { top: 100%; }
+    100% { top: 47%; }
+  }
+  .device_tab .icon {
+    font-size: 25px;
+  }
+  .products .device_wrapper {
+    flex-direction: column;
+  }
+  .products .device .description {
+    order: 2;
+    width: 100%;
+  }
+  .products .device .product_image {
+    margin: 0 auto;
+  }
+  .about .record {
+    width: 49%;
+  }
+  .about .record:nth-child(2n) {
+    border: none;
+  }
+  .about .description .details {
+    padding: 30px 10px;
+  }
+  .clients .client_logo {
+    width: 50%;
+  }
+  .subscribe_inner .newsletter {
+    width: 85%;
+  }
+  .clients .client_logo:nth-child(1n+13) {
+    border-bottom: 1px solid #cccccc82;
+  }
+  .clients .client_logo:nth-of-type(3n)  {
+    border-right: 1px solid #cccccc82;
+  }
+  .clients .client_logo:nth-of-type(2n)  {
+    border-right: none;
+  }
+  .clients .client_logo:last-child {
+    width: 50%;
+    margin-right: auto;
+    border-bottom: none;
+  }
+  .subscribe_head {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {  
+  .banner_wrapper {
+    padding: 300px 0 50px;
+  }
+  .app_number, .design_head {
+    font-size: 15px;
+  }
+  .design_head {
+    margin: 20px 0;
+  }
+  .app_number .value {
+    font-size: 23px;
+  }
+  .banner .get_quote {
+    padding: 8px 0;    
+  }
+  .banner .quote,
+  .growth .description .get_started,
+  .ios_wrapper .quote,
+  .contact .get_started {
+    font-size: 12px;
+  }
+  .ios_description {
+    padding-bottom: 20px;
+  }
+  .ios_wrapper .quote {
+    padding: 15px 10px;
+  }
+  .mockup_image.mockup2 {
+    top: 52%;
+  }
+  @keyframes moveUp {
+    0% { top: 100%; }
+    100% { top: 52%; }
+  }
+  .why_us_header {
+    margin-bottom: 60px;
+  }
+  .why_us_header .why_head {
+    font-size: 57px;
+  }
+  .why_sub_head {
+    font-size: 24px;
+    bottom: -15px;
+  }
+  footer {
+    padding-top: 150px;
+  }
+  .copyright {
+    line-height: 1.7;
+    font-size: 12px;
+  }
+  .subscribe_head {
+    font-size: 18px;
+  }
 }
