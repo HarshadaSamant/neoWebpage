@@ -540,8 +540,8 @@ body {
   text-transform: uppercase;
 }
 
-.overlay,
-.text_overlay {
+.button_primary,
+.button_secondary {
     background: rgba(243,48,80,1);
   background: -moz-linear-gradient(left, rgba(243,48,80,1) 0%, rgba(246,70,35,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,48,80,1)), color-stop(100%, rgba(246,70,35,1)));
@@ -554,7 +554,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.overlay {
+.button_primary {
    -webkit-background-clip: initial;
   -webkit-text-fill-color: #fff; 
 }
@@ -1922,7 +1922,7 @@ footer .icon_media:hover {
     z-index: 1;
     opacity: 0.4;
   }
-    .hide .navbar-toggler .bar:after {
+  .hide .navbar-toggler .bar:after {
     background-color: #fff;
     transform: rotate(45deg);
     transition-duration: 0.5s;
